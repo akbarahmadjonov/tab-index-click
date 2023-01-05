@@ -46,6 +46,13 @@ elForm.addEventListener("submit", (evt) => {
   //     elResult.textContent = "NEGATIVE";
   //   }
 
+  //* Checks if the users enters a text
+  if (isNaN(elFormInput.value)) {
+    alert(
+      `The text (${elFormInput.value}) you entered is not allowed, use numbers instead!`
+    );
+    return false;
+  }
   elPositiveButton.addEventListener("click", () => {
     if (elPositiveButton) {
       elResult.textContent = "Positive content";
