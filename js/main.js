@@ -55,9 +55,11 @@ elForm.addEventListener("submit", (evt) => {
 
   //* Checks if the users enters a text
   if (isNaN(elFormInput.value)) {
-    elErrSpan.textContent = `The text (${elFormInput.value}) you entered is not allowed, use numbers instead!`;
+    elErrSpan.classList.remove("d-none");
     elFormInput.classList.add("shake");
     return false;
+  } else {
+    elErrSpan.classList.add("d-none");
   }
 
   if (elFormInput.value == "") {
