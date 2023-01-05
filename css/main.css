@@ -1,0 +1,26 @@
+.active-color {
+  color: #000 !important;
+  font-style: italic;
+}
+
+.active-res {
+  color: #000;
+}
+
+.alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.form {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media only screen and (max-width: 320px) {
+  .form {
+    width: 100% !important;
+  }
+}
