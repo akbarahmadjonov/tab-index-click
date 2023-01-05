@@ -9,21 +9,21 @@ const elAlertErr = document.querySelector(".alert-error");
 // Call a function
 function indexUp(index, node) {
   if (index.value == 1) {
-    node.textContent = "Positive";
+    node.textContent = "Positive content";
     elPositiveButton.classList.add("active-color");
     //* Attach text
   } else {
     elPositiveButton.classList.remove("active-color");
   }
   if (index.value == 2) {
-    node.textContent = "Negative";
+    node.textContent = "Negative content";
     elNegativeButton.classList.add("active-color");
     //* Attach text
   } else {
     elNegativeButton.classList.remove("active-color");
   }
   if (index.value == 3) {
-    node.textContent = "Neutral";
+    node.textContent = "Neutral content";
     elNeutralButton.classList.add("active-color");
     //* Attach text
   } else {
@@ -46,23 +46,23 @@ elForm.addEventListener("submit", (evt) => {
   //     elResult.textContent = "NEGATIVE";
   //   }
 
-  elPositiveButton.addEventListener("click", (evt) => {
+  elPositiveButton.addEventListener("click", () => {
     if (elPositiveButton) {
-      elResult.textContent = "POSITIVE";
+      elResult.textContent = "Positive content";
       elResult.setAttribute("class", "active-color mt-4");
     }
   });
 
-  elNegativeButton.addEventListener("click", (evt) => {
+  elNegativeButton.addEventListener("click", () => {
     if (elNegativeButton) {
-      elResult.textContent = "NEGATIVE";
+      elResult.textContent = "Negative content";
       elResult.setAttribute("class", "active-color mt-4");
     }
   });
 
-  elNeutralButton.addEventListener("click", (evt) => {
+  elNeutralButton.addEventListener("click", () => {
     if (elNeutralButton) {
-      elResult.textContent = "NEUTRAL";
+      elResult.textContent = "Neutral content";
       elResult.setAttribute("class", "active-color mt-4");
     }
   });
