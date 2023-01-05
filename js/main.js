@@ -5,6 +5,7 @@ const elNegativeButton = document.querySelector(".neg-btn");
 const elNeutralButton = document.querySelector(".neu-btn");
 const elResult = document.querySelector(".js-res");
 const elAlertErr = document.querySelector(".alert-error");
+const elErrSpan = document.querySelector(".error-sp");
 
 // Call a function
 function indexUp(index, node) {
@@ -45,14 +46,27 @@ elForm.addEventListener("submit", (evt) => {
   //   if (evt.target(elNegativeButton)) {
   //     elResult.textContent = "NEGATIVE";
   //   }
+  //   if (evt.target(elPositiveButton)) {
+  //     elResult.textContent = "NEGATIVE";
+  //   }
+  //   if (evt.target(elNeutralButton)) {
+  //     elResult.textContent = "NEGATIVE";
+  //   }
 
   //* Checks if the users enters a text
   if (isNaN(elFormInput.value)) {
-    alert(
-      `The text (${elFormInput.value}) you entered is not allowed, use numbers instead!`
-    );
+    elErrSpan.textContent = `The text (${elFormInput.value}) you entered is not allowed, use numbers instead!`;
+    elFormInput.classList.add("shake");
     return false;
   }
+
+  if (elFormInput.value == "") {
+    elFormInput.classList.add("shake");
+  } else {
+    elFormInput.classList.remove("shake");
+  }
+  //* Checks if the users enters a text
+
   elPositiveButton.addEventListener("click", () => {
     if (elPositiveButton) {
       elResult.textContent = "Positive content";
